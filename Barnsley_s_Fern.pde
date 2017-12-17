@@ -37,9 +37,4 @@ void draw()
     y = 0.23 * tempX + 0.2 * y + 0.44;
   }
   point((float)x*scale, (float)y*scale);
-  if(frameCount % 100 == 0)
-    saveFrame("Frames/" + count++ + ".png");
-    
- if(count >= 600)
-   exit();
 }
