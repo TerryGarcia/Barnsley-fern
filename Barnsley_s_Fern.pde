@@ -1,22 +1,23 @@
 double x = 0;
 double y = 0;
-int scale = 98;
+float scale;
 int count = 0;
 
 
 void setup()
 {
   size(1000, 1000);
+  scale = height / 10.7;
   frameRate(-1);
   background(0);
   smooth(8);
-  stroke(0,100,0);
+  stroke(0, 100, 0);
 }
 
 void draw()
 {
-  translate(width / 2, height - 10);
-  rotate(PI);
+  scale(1, -1);
+  translate(width / 2, -height + 35);
   int random = (int)random(101);
   double tempX = x;
   if (random < 3)
@@ -30,11 +31,11 @@ void draw()
   } else if (random < 89)
   {
     x = -0.15 * x + 0.28 * y;
-    y = 0.26 * tempX + 0.24 * y + 1.6;
+    y = 0.26 * tempX + 0.24 * y + 0.44;
   } else
   {
     x = 0.2 * x - 0.26 * y;
-    y = 0.23 * tempX + 0.2 * y + 0.44;
+    y = 0.23 * tempX + 0.22 * y + 1.6;
   }
   point((float)x*scale, (float)y*scale);
 }
