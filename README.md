@@ -4,7 +4,7 @@ https://en.wikipedia.org/wiki/Barnsley_fern
 
 # Starting the sketch
 Just run the sketch in processing and if you want, you can edit some of the lines in the setup method.
-![untitled-1](https://user-images.githubusercontent.com/10190993/34074837-8dc9ddfe-e27d-11e7-85cf-ceff7eaf5186.gif)
+![untitled-1](https://user-images.githubusercontent.com/10190993/34095110-bfd0c236-e395-11e7-8a6e-324027d2250f.gif)
 
 
 # Openprocessing
