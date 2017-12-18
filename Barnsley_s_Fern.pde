@@ -1,23 +1,33 @@
+// settings
+int windowWidth = 600;
+int windowHeight = 600;
+int antiAliasing = 8;
+color backgroundColor = color(0, 0, 0); // color(red, green, blue)
+color pointColor = color(0, 100, 0); // color(red, green, blue)
+int framesPerSecond = -1; // -1 for unlimited
+
+// proceed with caution
 double x = 0;
 double y = 0;
 float scale;
-int count = 0;
-
+void settings()
+{
+  size(windowWidth, windowHeight);
+}
 
 void setup()
 {
-  size(1000, 1000);
   scale = height / 10.7;
-  frameRate(-1);
-  background(0);
-  smooth(8);
-  stroke(0, 100, 0);
+  smooth(antiAliasing);
+  background(backgroundColor);
+  stroke(pointColor);
+  frameRate(framesPerSecond);
 }
 
 void draw()
 {
   scale(1, -1);
-  translate(width / 2, -height + 35);
+  translate(width / 2, -height + .3 * scale);
   int random = (int)random(101);
   double tempX = x;
   if (random < 3)
